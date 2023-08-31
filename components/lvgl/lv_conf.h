@@ -30,7 +30,11 @@
 // #else
 // #endif
 
+#ifndef CONFIG_LV_TFT_DISPLAY_MONOCHROME 
+#define LV_COLOR_DEPTH  1 
+#elif 
 #define LV_COLOR_DEPTH  CONFIG_LV_COLOR_DEPTH 
+#endif
 
 // 1 per byes used of SSD1306 and paper display and 16, 32 big size
 
