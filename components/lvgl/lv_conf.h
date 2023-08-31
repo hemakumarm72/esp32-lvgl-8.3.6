@@ -24,12 +24,15 @@
  *====================*/
 
 /*Color depth: 1 (1 byte per pixel), 8 (RGB332), 16 (RGB565), 32 (ARGB8888)*/
-#if defined CONFIG_LV_TFT_DISPLAY_MONOCHROME
-/* For the monochrome display driver controller, e.g. SSD1306 and SH1107, use a color depth of 1. */
-#define LV_COLOR_DEPTH     1
-#else
-#define LV_COLOR_DEPTH     16
-#endif
+// #if defined CONFIG_LV_TFT_DISPLAY_MONOCHROME
+// /* For the monochrome display driver controller, e.g. SSD1306 and SH1107, use a color depth of 1. */
+// #define LV_COLOR_DEPTH     1
+// #else
+// #endif
+
+#define LV_COLOR_DEPTH  CONFIG_LV_COLOR_DEPTH 
+
+// 1 per byes used of SSD1306 and paper display and 16, 32 big size
 
 /*Swap the 2 bytes of RGB565 color. Useful if the display has an 8-bit interface (e.g. SPI)*/
 #define LV_COLOR_16_SWAP 0
@@ -359,7 +362,7 @@
 /*Montserrat fonts with ASCII range and some symbols using bpp = 4
  *https://fonts.google.com/specimen/Montserrat*/
 #define LV_FONT_MONTSERRAT_8  0
-#define LV_FONT_MONTSERRAT_10 0
+#define LV_FONT_MONTSERRAT_10 1
 #define LV_FONT_MONTSERRAT_12 0
 #define LV_FONT_MONTSERRAT_14 1
 #define LV_FONT_MONTSERRAT_16 0
@@ -595,7 +598,7 @@
 
 #if defined CONFIG_LV_TFT_DISPLAY_MONOCHROME
 /* For the monochrome display driver controller, e.g. SSD1306 and SH1107, use a color depth of 1. */
- #define LV_THEME_DEFAULT_COLOR_PRIMARY      LV_COLOR_BLACK
+ #define LV_THEME_DEFAULT_COLOR_PRIMARY      LV_COLOR_BLACK 
  #define LV_THEME_DEFAULT_COLOR_SECONDARY    LV_COLOR_WHITE
 
 #endif
