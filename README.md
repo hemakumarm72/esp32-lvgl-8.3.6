@@ -1,5 +1,8 @@
 # LVGL project for ESP32
 
+- lvgl version: 8.3.6
+- esp-idf-4.4.5
+
 This is an ESP32 demo project showcasing LVGL v7 with support for several display controllers and touch controllers.
 
 ![Example GUI_DEMO](images/new_photo.jpg)
