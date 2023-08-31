@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "*.jsx": "javascriptreact",
+        "*.js": "javascript",
+        "lvgl_helpers.h": "c"
+    },
+    {
+        "editor.formatOnSave": true
+    }
+}
