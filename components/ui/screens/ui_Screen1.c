@@ -10,13 +10,11 @@ void ui_Screen1_screen_init(void)
 ui_Screen1 = lv_obj_create(NULL);
 lv_obj_clear_flag( ui_Screen1, LV_OBJ_FLAG_SCROLLABLE );    /// Flags
 
-ui_Label1 = lv_label_create(ui_Screen1);
-lv_obj_set_width( ui_Label1, 28);
-lv_obj_set_height( ui_Label1, 10);
-lv_obj_set_x( ui_Label1, 1 );
-lv_obj_set_y( ui_Label1, -1 );
-lv_obj_set_align( ui_Label1, LV_ALIGN_CENTER );
-lv_label_set_text(ui_Label1,"click");
-lv_obj_set_style_text_font(ui_Label1, &lv_font_montserrat_10, LV_PART_MAIN| LV_STATE_DEFAULT);
+ui_Spinner1 = lv_spinner_create(ui_Screen1,1000,90);
+lv_obj_set_width( ui_Spinner1, 48);
+lv_obj_set_height( ui_Spinner1, 50);
+lv_obj_set_align( ui_Spinner1, LV_ALIGN_CENTER );
+lv_obj_clear_flag( ui_Spinner1, LV_OBJ_FLAG_CLICKABLE );    /// Flags
+
 
 }
