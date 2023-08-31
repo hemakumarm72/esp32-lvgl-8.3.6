@@ -1,5 +1,5 @@
 # LVGL project for ESP32
-
+# Squareline Studio + ESP32 + SSD1306
 - lvgl version: 8.3.6
 - esp-idf-4.4.5
 
